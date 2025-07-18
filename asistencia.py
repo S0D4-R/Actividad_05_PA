@@ -1,16 +1,22 @@
 key = True
 class CollegeStudent:
-    def __init__(self, name, age, course, avg_score):
+    def __init__(self, name, ide, course, attendance):
         self.name = name
-        self.age = age
+        self.ide = ide
         self.course = course
-        self.avg_score = avg_score
+        self.attendance = attendance
 
-students_compendium = {}
-
+students_compendium = []
+attendace = []
 
 def agregar_estudiante():
-    pass
+    student_name = input("Coloque el nombre del estudiante: ")
+    student_id = input("Coloque el carné del estudiante: ")
+    sudent_course = input("Coloque el curso que lleva")
+    student_att = None
+    temp_student = CollegeStudent(student_name,student_id,sudent_course, student_att)
+    students_compendium.append(temp_student)
+    print()
 
 
 def registrar_asistencia():
